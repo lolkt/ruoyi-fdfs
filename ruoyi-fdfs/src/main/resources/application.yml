@@ -4,3 +4,9 @@ spring:
   http:
     encoding:
       charset: utf-8
+
+
+# 忽略swagger java.lang.NumberFormatException: For input string: ""
+logging:
+  level:
+    io.swagger.models.parameters.AbstractSerializableParameter: error
