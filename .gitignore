@@ -2,3 +2,5 @@
 /ruoyi-fdfs/*.iml
 /ruoyi-common-redis/target
 /ruoyi-fdfs/target
+/ruoyi-common-redis/*.iml
+/*.iml

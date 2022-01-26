@@ -1,5 +1,7 @@
 server:
   port: 8006
+  servlet:
+    context-path: /
 # 日志配置
 logging:
   level:
@@ -9,8 +11,12 @@ logging:
 spring:
   application:
     name: ruoyi-fdfs
-  profiles:
-    active: dev
+  mvc:
+    pathmatch:
+      use-suffix-pattern: true
+    view:
+      prefix: /
+      suffix: .jsp
   devtools:
     restart:
       enabled: true
