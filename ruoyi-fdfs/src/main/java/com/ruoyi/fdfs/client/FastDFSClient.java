@@ -74,7 +74,7 @@ public class FastDFSClient {
 
     // 封装图片完整URL地址
     private String getResAccessUrl(StorePath storePath) {
-        String fileUrl = "http://photo.mingbyte.com/" + storePath.getFullPath();
+        String fileUrl = "http://10.0.0.18:8888/" + storePath.getFullPath();
         return fileUrl;
     }
     /**

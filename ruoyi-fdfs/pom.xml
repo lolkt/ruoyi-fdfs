@@ -132,16 +132,16 @@
 		<dependency>
 			<groupId>com.github.tobato</groupId>
 			<artifactId>fastdfs-client</artifactId>
-			<version>1.26.5</version>
+			<version>1.27.2</version>
 			<exclusions>
 				<exclusion>
 					<groupId>ch.qos.logback</groupId>
 					<artifactId>logback-classic</artifactId>
 				</exclusion>
-				<exclusion>
+				<!--<exclusion>
 					<artifactId>commons-beanutils</artifactId>
 					<groupId>commons-beanutils</groupId>
-				</exclusion>
+				</exclusion>-->
 			</exclusions>
 		</dependency>
 		<dependency>

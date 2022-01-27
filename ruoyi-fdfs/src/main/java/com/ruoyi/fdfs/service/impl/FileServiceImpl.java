@@ -219,7 +219,7 @@ public class FileServiceImpl implements FileService {
                                 UpLoadConstant.lockOwner + fileMd5,
                                 UpLoadConstant.fastDfsSize + fileMd5);
                         logger.info("***********正常结束**********");
-                        return RespMsgBean.success("success");
+                        return RespMsgBean.success(fileDo,"success");
                     }
                     if (currentChunkInFront + 1 > chunks) {
                         return RespMsgBean.failure("文件已上传结束");

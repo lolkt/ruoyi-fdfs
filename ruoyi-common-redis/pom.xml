@@ -114,29 +114,6 @@
 			<artifactId>jedis</artifactId>
 		</dependency>
 
-		<!--fdfs分布式文件存储-->
-		<dependency>
-			<groupId>com.github.tobato</groupId>
-			<artifactId>fastdfs-client</artifactId>
-			<version>1.26.5</version>
-			<exclusions>
-				<exclusion>
-					<groupId>ch.qos.logback</groupId>
-					<artifactId>logback-classic</artifactId>
-				</exclusion>
-				<exclusion>
-					<artifactId>commons-beanutils</artifactId>
-					<groupId>commons-beanutils</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>net.oschina.zcx7878</groupId>
-			<artifactId>fastdfs-client-java</artifactId>
-			<version>1.27.0.0</version>
-		</dependency>
-
-
 		<dependency>
 			<groupId>javax.ws.rs</groupId>
 			<artifactId>javax.ws.rs-api</artifactId>

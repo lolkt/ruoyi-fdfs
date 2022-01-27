@@ -27,11 +27,11 @@ spring:
     time-zone: GMT+8
   servlet:
     multipart:
-      maxFileSize: 5MB  #单位必须大写MB或不写(即为B)
-      maxRequestSize: 10MB
+      maxFileSize: 500MB  #单位必须大写MB或不写(即为B)
+      maxRequestSize: 500MB
   redis:
     database: 1
-    host: 192.168.8.104
+    host: 10.0.0.18
     port: 6379
     password:      # 密码（默认为空）
     timeout: 6000ms  # 连接超时时长（毫秒）
@@ -48,7 +48,7 @@ fdfs:
     width: 150
     height: 150
   tracker-list:            #TrackerList参数,支持多个
-    - 192.168.8.128:22122
+    - 10.0.0.18:22122
   http:
     anti_steal_token: true
     secret_key: MingbyteAcademician
