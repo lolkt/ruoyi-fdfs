@@ -3,7 +3,9 @@ package com.ruoyi.fdfs.domain;
 import java.io.Serializable;
 
 /**
- * Created by Administrator on 2017/3/28 0028.
+ *
+ * @author Administrator
+ * @date 2017/3/28 0028
  */
 public class RespMsgBean<T> implements Serializable{
 
@@ -15,7 +17,6 @@ public class RespMsgBean<T> implements Serializable{
         this.code = UpLoadConstant.kCode_Fail;
         this.msg = "";
     }
-
 
 
     public RespMsgBean(String code, String msg) {
@@ -52,9 +53,6 @@ public class RespMsgBean<T> implements Serializable{
     public void setData(T data) {
         this.data = data;
     }
-
-
-    //  默认方法
 
     public static RespMsgBean successMsg(String msg){
         RespMsgBean apiBean = new RespMsgBean(UpLoadConstant.kCode_Success, msg, null);

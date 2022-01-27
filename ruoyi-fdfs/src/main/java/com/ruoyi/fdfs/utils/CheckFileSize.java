@@ -3,8 +3,6 @@ package com.ruoyi.fdfs.utils;
 import org.springframework.web.multipart.MultipartFile;
 
 public class CheckFileSize {
-
-
     /**
      * @author jxd
      * @describe 判断上传文件大小
@@ -16,7 +14,8 @@ public class CheckFileSize {
      * @return boolean
      */
     public static boolean check(MultipartFile multipartFile, int size, String unit) {
-        long len = multipartFile.getSize();//上传文件的大小, 单位为字节.
+        //上传文件的大小, 单位为字节.
+        long len = multipartFile.getSize();
         //准备接收换算后文件大小的容器
         double fileSize = 0;
         if ("B".equals(unit.toUpperCase())) {

@@ -16,7 +16,10 @@ import java.util.List;
  */
 public class FileCutUtils {
     private List<File> littlefilelist = new ArrayList<>();
-    private String fileCathePath = "D://test/bigfile/cutlittlefile";   //切片视频切割后缓存地址
+    /**
+     * 切片视频切割后缓存地址
+     */
+    private String fileCathePath = "D://test/bigfile/cutlittlefile";
 
     /**
      * 文件分割方法
@@ -49,7 +52,6 @@ public class FileCutUtils {
             }
 
         } catch (FileNotFoundException e) {
-//            System.out.println("没有找到文件");
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
@@ -103,13 +105,9 @@ public class FileCutUtils {
 
                 //定义当前读取文件的指针
                 endPointer = in.getFilePointer();
-                //关闭输入流
                 in.close();
-                //关闭输出流
                 out.close();
             } else {
-                //不存在
-
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -140,7 +138,10 @@ public class FileCutUtils {
         }
     }
 
-    // 判断文件是否存在
+    /**
+     * 判断文件是否存在
+     */
+
     public static boolean isFileExist(File file) {
         return file.exists();
     }
@@ -167,12 +168,14 @@ public class FileCutUtils {
         }
         for (File file : dir.listFiles()) {
             if (file.isFile()) {
-                file.delete(); // 删除所有文件
+                // 删除所有文件
+                file.delete();
             } else if (file.isDirectory()) {
-                deleteDirWihtFile(file); // 递规的方式删除文件夹
+                // 递规的方式删除文件夹
+                deleteDirWihtFile(file);
             }
         }
-        dir.delete();// 删除目录本身
+        dir.delete();
     }
 
 
@@ -180,16 +183,17 @@ public class FileCutUtils {
         String filePath = "D://test/bigfile/test.mp4";
         String fileMD5 = MD5Util.getFileMD5(filePath);
         System.out.println("fileMD5=" + fileMD5);
-        long mBufferSize = 1024 * 1024 * 30; //分片的大小，可自定义
+        //分片的大小，可自定义
+        long mBufferSize = 1024 * 1024 * 30;
         FileCutUtils fileCutUtils = new FileCutUtils();
-        int littlefilecount = fileCutUtils.getSplitFile(new File(filePath), mBufferSize);
-        List<File> littleFilelist = fileCutUtils.getLittlefilelist();
+        int filecount = fileCutUtils.getSplitFile(new File(filePath), mBufferSize);
+        List<File> littleFiles = fileCutUtils.getLittlefilelist();
 
-        System.out.println("littlefilecount=" + littlefilecount);
+        System.out.println("filecount=" + filecount);
 
-        for (File file : littleFilelist) {
+        for (File file : littleFiles) {
             System.out.println("filePath=" + file.getAbsolutePath());
-            System.out.println("fileSize=" + (long)FileSizeUtil.getFileOrFilesSize(file.getAbsolutePath(), FileSizeUtil.SIZETYPE_B));
+            System.out.println("fileSize=" + (long) FileSizeUtil.getFileOrFilesSize(file.getAbsolutePath(), FileSizeUtil.SIZETYPE_B));
         }
     }
 }
