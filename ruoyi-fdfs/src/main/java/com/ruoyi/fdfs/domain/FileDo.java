@@ -21,6 +21,8 @@ public class FileDo {
 
     private Long updateUser;
 
+    private String fileMd5;
+
     public FileDo(String fileName, String url, String sl, Long size, String bizId, String bizCode) {
         this.fileName = fileName;
         this.url = url;
@@ -29,4 +31,5 @@ public class FileDo {
         this.bizId = bizId;
         this.bizCode = bizCode;
     }
+
 }
